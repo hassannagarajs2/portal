@@ -124,7 +124,8 @@ pipeline {
           echo "Deploy Failed: Branch '${env.BRANCH_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})"
         }
       }
-    
+    }
+  }
 
   post{
     always {
