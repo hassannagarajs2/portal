@@ -14,7 +14,7 @@ void failSafeBuild(configId, packageType){
 
             configFileProvider([
                 configFile(fileId: configId, targetLocation: targetLocation),
-                configFile(fileId: configId + '-migration', targetLocation: './cms/variant-migrations/config.js'),
+                configFile(fileId: configId + '-migration', targetLocation: './cms/variant-migrations/migrate-mongo-config.js'),
             ]) {
                 sh '''
                     portal-ci/build_stage/build.sh portal-ci ''' + packageType + '''
